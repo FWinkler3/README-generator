@@ -22,9 +22,14 @@ const questions = [
     },
     {
       type: 'input',
-      message: 'Please describe your project.',
-      name: 'description',
+      message: 'In no more than 2 sentences, please summarize your project.',
+      name: 'summary',
     },
+    {
+        type: 'input',
+        message: 'Please describe your project in detail.',
+        name: 'detail',
+      },
     {
       type: 'input',
       message: 'How do you get your project installed? Please provide a detailed step-by-step description.',
@@ -43,78 +48,62 @@ const questions = [
     {
         type: 'list',
         message: 'Please select a license from the list below:',
-        choices: ['MIT', new inquirer.Separator(), "GNU"],
+        choices: ['MIT', "Apache-2.0", "GPL-3.0"],
         name: 'license',
     },
-    {
-        type: 'input',
-        message: 'What is your GitHub URL?',
-        name: 'tests',
-    },
+
 ];
 //license badge variables
 
-
 // TODO: Create a function to write README file
 //function writeToFile(fileName, data) {}
-
-
-inquirer
+ 
+inquirer 
   .prompt(questions)
   .then((response) =>
   fs.writeFile("README.md", `
-## ${response.title}
-        \n--------------------------------
+## ${response.title}\n
+
 ${response.license}
-## Table of Contents
-        \n--------------------------------
-        [Description](##description)
-        [Installation](##installation
-        [Usage](##usage)
-        [License](##license)
-        \n--------------------------------
+### Table of Contents\n
+[Description](#Description)\n
+[Installation](#Installation)\n
+[Usage](#Usage)\n
+[License](#License)\n
 
-## Description
-        \n--------------------------------
-        ${response.description}
-        \n--------------------------------
+### Description\n
+#### Summary\n
+${response.summary}
 
-## Installation
-        \n--------------------------------
+#### In Depth\n
+${response.detail}
+
+### Installation\n
 ${response.installation}
-        \n--------------------------------
 
-## Usage
-        \n--------------------------------
+### Usage\n
 ${response.usage}
-        \n--------------------------------
 
-## License
-        \n--------------------------------
-        \n--------------------------------
+### License\n
+This project's license is : ${response.license}
 
-## Credits
-        \n--------------------------------
+### Credits\n
+${response.contributing}
+### Tests\n
 
-        \n--------------------------------
-
-## Tests
-        \n--------------------------------
-
-        \n--------------------------------
-
-## Contact Info
-        \n--------------------------------
+### Contact Info\n
 GitHub: www.github.com/${response.github}
 Email: ${response.email}
-        \n--------------------------------
-
 `
-));
+)
+.then(console.log("Your README.md file is ready!"))
+);
 
 
 // TODO: Create a function to initialize app
-function init() {}
+function init() { 
+        
+}
 
 // Function call to initialize app
 init();
