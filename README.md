@@ -31,6 +31,8 @@ A command-line based application which, when invoked, will prompt a User with a 
 
 Navigate to the folder in the terminal window. Using the pakcage.json file, run the command 'npm install' to install Inquirer8.2.4. Once completed, run the command 'node index.js' and the applicaiton will be invoked. 
 
+Here is a video of the applicaiton in use: https://drive.google.com/file/d/1D6K3bjJgxlhBnuhgV_YVYbaSyKPxBL7n/view 
+
 ### Usage
 
 Consistency in README files is key to being a good developer. 
