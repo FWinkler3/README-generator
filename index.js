@@ -1,5 +1,4 @@
 // TODO: Include packages needed for this application
-//const { title } = require('process');
 const fs = require('fs/promises'); 
 const inquirer = require('inquirer');
 
@@ -62,18 +61,18 @@ inquirer
 //         .then((response) => 
 //         fs.writeFile()))
   .then((response) =>
-  fs.writeFile("README.md", `
+  fs.writeFile("./created/README.md", `
 ## ${response.title}\n
 
-![badge](https://img.shields.io/badge/license-${response.license}-brightgreen)
+![License-${response.license}](https://img.shields.io/badge/license-${response.license}-brightgreen)(https://opensource.org/licenses/${response.license})
 <br />
 This application is covered by the ${response.license} license.
 
 ### Table of Contents\n
-[Description](#Description)\n
-[Installation](#Installation)\n
-[Usage](#Usage)\n
-[License](#License)\n
+[Description](#description)\n
+[Installation](#installation)\n
+[Usage](#usage)\n
+[License](#license)\n
 
 ### Description\n
 #### Summary\n
@@ -96,7 +95,7 @@ ${response.contributing}
 ### Tests\n
 
 ### Contact Info\n
-GitHub: www.github.com/${response.github}
+GitHub: https://www.github.com/${response.github}\n
 Email: ${response.email}
 `
 )

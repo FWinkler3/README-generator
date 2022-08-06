@@ -2,35 +2,38 @@
 ## README Generator
 
 
-MIT
+![License-MIT](https://img.shields.io/badge/license-MIT-brightgreen)(https://opensource.org/licenses/MIT)
+<br />
+This application is covered by the MIT license.
+
 ### Table of Contents
 
-[Description](#Description)
+[Description](#description)
 
-[Installation](#Installation)
+[Installation](#installation)
 
-[Usage](#Usage)
+[Usage](#usage)
 
-[License](#License)
+[License](#license)
 
 
 ### Description
 
 #### Summary
 
-A command-line based applicaton which presents a user with a series of questions and generates a README.md file from user responses.
+A command-line based application which through a series of questions will prompt the user and generate a README.md file. 
 
 #### In Depth
 
-This application is a command-line based application which presents a user with a series of 9 questions by utilizing the Inquirer v8.2.4 package. The first 8 questions require a user to input text and the last question is chosen from a list of options. Upon finishing the questions, a README.md file is created and written to a local folder, which can then be opened and edited by the user. 
+A command-line based application which, when invoked, will prompt a User with a series of 9 questions total. The first 8 questions require user input and the final question presents a user with choices for different licenses. Once the final question is answered, the terminal will let the user know that a README file has been successfully generated and stored in a local folder as to not overwite the README.md file created by the developer of this application. 
 
 ### Installation
 
-Using a terminal, navigate to the folder containing index.js and type node index.js and click enter. The terminal will then begin to ask the user a series of questions. 
+Navigate to the folder in the terminal window. Using the pakcage.json file, run the command 'npm install' to install Inquirer8.2.4. Once completed, run the command 'node index.js' and the applicaiton will be invoked. 
 
 ### Usage
 
-Since README.md files are such a vital part of repositories and applications, consistency when writing README.md files will help the devloper reach a wider audience. 
+Consistency in README files is key to being a good developer. 
 
 ### License
 
@@ -38,11 +41,12 @@ This project's license is : MIT
 
 ### Credits
 
-A special shoutout to Inquirer v8.2.4
+N/A
 ### Tests
 
 
 ### Contact Info
 
-GitHub: www.github.com/FWinkler3
-Email: frank.w.winkler@gmail.com
+GitHub: https://www.github.com/FWinkler3
+
+Email: frank.w.w.winkler@gmail.com
