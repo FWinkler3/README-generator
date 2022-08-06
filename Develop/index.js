@@ -48,23 +48,27 @@ const questions = [
     {
         type: 'list',
         message: 'Please select a license from the list below:',
-        choices: ['MIT', "Apache-2.0", "GPL-3.0"],
+        choices: ["MIT", "Apache-2.0", "GPL-3.0"],
         name: 'license',
     },
 
 ];
-//license badge variables
 
 // TODO: Create a function to write README file
-//function writeToFile(fileName, data) {}
  
 inquirer 
   .prompt(questions)
+//   .then (if ${response.license} === MIT
+//         .then((response) => 
+//         fs.writeFile()))
   .then((response) =>
   fs.writeFile("README.md", `
 ## ${response.title}\n
 
-${response.license}
+![badge](https://img.shields.io/badge/license-${response.license}-brightgreen)
+<br />
+This application is covered by the ${response.license} license.
+
 ### Table of Contents\n
 [Description](#Description)\n
 [Installation](#Installation)\n
@@ -98,13 +102,3 @@ Email: ${response.email}
 )
 .then(console.log("Your README.md file is ready!"))
 );
-
-
-// TODO: Create a function to initialize app
-function init() { 
-        
-}
-
-// Function call to initialize app
-init();
-
